@@ -14,7 +14,7 @@ console.log(path.join(__dirname , '../public')) //path.join() is a function whic
 //We can customize are views directory and rename it to some other directory name(say templates) - but for that we have to add the path to that directory as the express does not know about it - it only knows about 'views' folder.
 
 const app = express()
-
+const port = process.env.PORT || 3000
 
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname , '../public')
@@ -164,6 +164,6 @@ app.get('/about' , (req,res) => {
 //app.com/about
 
 //to start the server up - app.listen is used
-app.listen(3000 , () =>{
-	console.log('Server is up on port 3000')
+app.listen(port , () =>{
+	console.log('Server is up on port ' + port)
 })

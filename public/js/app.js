@@ -2,12 +2,13 @@
 //fetch () is used to fetch values from an api 
 //the syntax used below means - fetch the value from the url and then get the response - once the reponse is received - parse it into a js object and dump it to the console or render it on the browser page.
 
+/*
 fetch('http://puzzle.mead.io/puzzle').then((response) => {
 	response.json().then((data) => {
 		console.log(data)
 	})
 })
-
+*/
 
 //document.querySelector('form') - this function is used to access the form element on the client side js which are trying to work with - now what comesback from that is a js represenation of that element and we can use that to manipulate the element or to do things when a user interacts with the element.
 
@@ -29,7 +30,7 @@ weatherForm.addEventListener('submit' , (e) => {
 messageOne.textContent = 'Loading...'
 messageTwo.textContent = ''
 
-fetch('http://localhost:3000/weather?address='+location).then((response) => {
+fetch('/weather?address='+location).then((response) => {
         response.json().then((data) => {
                 if(data.error){
                         messageOne.textContent = data.error
