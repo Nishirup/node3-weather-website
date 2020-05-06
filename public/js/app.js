@@ -1,4 +1,3 @@
-
 //fetch () is used to fetch values from an api 
 //the syntax used below means - fetch the value from the url and then get the response - once the reponse is received - parse it into a js object and dump it to the console or render it on the browser page.
 
