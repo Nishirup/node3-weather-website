@@ -164,6 +164,7 @@ app.get('/about' , (req,res) => {
 //app.com/about
 
 //to start the server up - app.listen is used
+
 app.listen(port , () =>{
 	console.log('Server is up on port ' + port)
 })
